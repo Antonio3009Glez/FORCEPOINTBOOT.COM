@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Force Point | Calzado Industrial</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--primary:#FFC107;
+--dark:#111111;
+--dark2:#1c1c1c;
+--text:#ffffff;
+--gray:#b5b5b5;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:var(--dark);
+color:var(--text);
+}
+
+.container{
+width:90%;
+max-width:1300px;
+margin:auto;
+}
+
+/* HEADER */
+
+header{
+position:fixed;
+top:0;
+width:100%;
+z-index:999;
+background:rgba(17,17,17,.96);
+backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 0;
+}
+
+.logo img{
+height:65px;
+}
+
+.menu{
+display:flex;
+gap:30px;
+}
+
+.menu a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.3s;
+}
+
+.menu a:hover{
+color:var(--primary);
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+}
+
+.hero-content{
+max-width:750px;
+}
+
+.hero h1{
+font-size:72px;
+color:var(--primary);
+font-weight:800;
+}
+
+.hero h2{
+font-size:38px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+line-height:1.8;
+color:#ddd;
+margin-bottom:35px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 30px;
+border-radius:5px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+margin-right:10px;
+}
+
+.btn-primary{
+background:var(--primary);
+color:black;
+}
+
+.btn-primary:hover{
+transform:translateY(-3px);
+}
+
+.btn-outline{
+border:2px solid var(--primary);
+color:var(--primary);
+}
+
+.btn-outline:hover{
+background:var(--primary);
+color:black;
+}
+
+/* SECTION */
+
+section{
+padding:100px 0;
+}
+
+.section-title{
+text-align:center;
+font-size:42px;
+margin-bottom:15px;
+}
+
+.section-sub{
+text-align:center;
+color:var(--gray);
+margin-bottom:50px;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:var(--dark2);
+padding:30px;
+border-radius:12px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+color:var(--primary);
+margin-bottom:15px;
+}
+
+/* PRODUCTOS */
+
+.product{
+background:var(--dark2);
+border-radius:12px;
+overflow:hidden;
+display:flex;
+flex-direction:column;
+}
+
+.product img{
+width:100%;
+height:280px;
+object-fit:cover;
+}
+
+.product-info{
+padding:25px;
+flex-grow:1;
+}
+
+.product-info h3{
+color:var(--primary);
+margin-bottom:5px;
+font-size:24px;
+}
+
+.product-tallas{
+color:var(--gray);
+font-size:14px;
+margin-bottom:15px;
+font-weight:500;
+}
+
+.product-info h4{
+color:#fff;
+font-size:16px;
+margin-bottom:10px;
+border-bottom:1px solid rgba(255,255,255,.1);
+padding-bottom:5px;
+}
+
+.product-info ul{
+list-style:none;
+padding:0;
+}
+
+.product-info ul li{
+font-size:13px;
+color:#ddd;
+line-height:1.6;
+margin-bottom:8px;
+position:relative;
+padding-left:15px;
+}
+
+.product-info ul li::before{
+content:"•";
+color:var(--primary);
+position:absolute;
+left:0;
+font-weight:bold;
+}
+
+/* CERTIFICACIONES */
+
+.certs{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.cert{
+background:var(--primary);
+padding:18px 35px;
+color:black;
+font-weight:700;
+border-radius:8px;
+}
+
+/* FORM */
+
+form{
+max-width:800px;
+margin:auto;
+}
+
+.form-group{
+margin-bottom:15px;
+}
+
+input,
+textarea,
+select{
+width:100%;
+padding:15px;
+border:none;
+border-radius:6px;
+background:#222;
+color:white;
+}
+
+textarea{
+height:150px;
+resize:none;
+}
+
+button{
+cursor:pointer;
+border:none;
+}
+
+/* FOOTER */
+
+footer{
+background:black;
+padding:30px;
+text-align:center;
+border-top:1px solid rgba(255,255,255,.08);
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+color:white;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+text-decoration:none;
+z-index:999;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:45px;
+}
+
+.hero h2{
+font-size:28px;
+}
+
+.menu{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="container navbar">
+
+<div class="logo">
+<img src="images/logo-force-point.png" alt="Force Point">
+</div>
+
+<nav class="menu">
+<a href="#inicio">Inicio</a>
+<a href="#catalogo">Catálogo</a>
+<a href="#tecnologia">Tecnología</a>
+<a href="#certificaciones">Certificaciones</a>
+<a href="#distribuidores">Distribuidores</a>
+<a href="#contacto">Contacto</a>
+</nav>
+
+</div>
+
+</header>
+
+<section class="hero" id="inicio">
+
+<div class="container hero-content">
+
+<h1>FORCE POINT</h1>
+
+<h2>Protección que resiste cada desafío</h2>
+
+<p>
+Calzado industrial fabricado con piel vacuna genuina,
+casquillos de protección y materiales certificados
+para brindar seguridad, comodidad y durabilidad.
+</p>
+
+<a href="#catalogo" class="btn btn-primary">
+Ver Catálogo
+</a>
+
+<a href="#cotizacion" class="btn btn-outline">
+Solicitar Cotización
+</a>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+Sectores que Atendemos
+</h2>
+
+<p class="section-sub">
+Soluciones para empresas y distribuidores.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>🏭 Manufactura</h3>
+<p>Protección para plantas y líneas de producción.</p>
+</div>
+
+<div class="card">
+<h3>🏗 Construcción</h3>
+<p>Seguridad para entornos exigentes.</p>
+</div>
+
+<div class="card">
+<h3>📦 Logística</h3>
+<p>Comodidad para largas jornadas operativas.</p>
+</div>
+
+<div class="card">
+<h3>🚛 Transporte</h3>
+<p>Diseño confiable para operadores.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="catalogo">
+
+<div class="container">
+
+<h2 class="section-title">
+Catálogo Completo de Modelos
+</h2>
+<p class="section-sub">Conoce las especificaciones técnicas y rangos de fabricación de cada calzado.</p>
+
+<div class="grid">
+
+<div class="product">
+<img src="images/0043.jpg" alt="Estilo 0043">
+<div class="product-info">
+<h3>Estilo 0043</h3>
+<div class="product-tallas">Tallas: 22 AL 30</div>
+<h4>Ficha Técnica</h4>
+<ul>
+<li>Bota táctica</li>
+<li>Piel vacuna 20/22</li>
+<li>Tejido exterior resistente, como piel negra</li>
+<li>Casco de Celaste de resina en la punta</li>
+<li>Cierre lateral para una fácil puesta</li>
+<li>Sistema de cordones de cierre rápido y cambrillón de termoplástico</li>
+<li>Agujeta Polyester con alma de algodón de 8 cabos mínimo y herretes de plástico</li>
+<li>Forros Malla baical tratada con ultra fresh-antibacterial con un grueso de 4 mm para mayor confort y duración en el tubo, en la chinela carnaza perlada para que transpire el pie sin problemas y con mayor frescura</li>
+<li>Plantilla Ergonómica recubierta con malla textil con excelente transpiración, tratamiento antimicrobiano y tejidos transpirables e impermeables para mantener el pie seco</li>
+<li>Planta Material de fibra de poliéster alta flexibilidad con buena absorción y des absorción de agua resistente al crecimiento de hongos y bacterias</li>
+<li>Contrahazte Material de resina sintética de 4 fierros de espesor</li>
+<li>Protección de tobillos con caña flexible y resistente</li>
+<li>Suela hule negro, teniendo como característica de ligereza, resistencia a la abrasión, resistencia al plegado, antideslizante, aislante térmico, amortiguación media, impermeable, resistente a un rango de temperatura de -10 °C a 70 °C</li>
+</ul>
+</div>
+</div>
+
+<div class="product">
+<img src="images/8430.jpg" alt="Estilo 8430">
+<div class="product-info">
+<h3>Estilo 8430</h3>
+<div class="product-tallas">Tallas: 25 AL 30</div>
+<h4>Ficha Técnica</h4>
+<ul>
+<li>Botas borceguí</li>
+<li>Piel vacuna Calibre 20/22</li>
+<li>Tejido exterior resistente, como piel calibre 20/22</li>
+<li>Casco de poliamida 630, de alta densidad y mayor protección</li>
+<li>Sistema de cordones de cierre rápido y cambrillón de termoplástico</li>
+<li>Agujeta Polyester con alma de algodón de 8 cabos mínimo y herretes de plástico</li>
+<li>Forros Malla baical tratada con ultra fresh-antibacterial con un grueso de 4 mm para mayor confort y duración en el tubo, en la chinela carnaza perlada para que transpire el pie sin problemas y con mayor frescura</li>
+<li>Plantilla Ergonómica recubierta con malla textil con excelente transpiración, mallas textiles de alta transpiración y tratamiento antimicrobiano. Tejidos transpirables e impermeables para mantener el pie seco</li>
+<li>Planta Material de fibra de poliéster alta flexibilidad con buena absorción y des absorción de agua resistente al crecimiento de hongos y bacterias</li>
+<li>Contrahazte Material de resina sintética de 4 fierros de espesor</li>
+<li>Forro interior de alta calidad</li>
+<li>Protección de tobillos con caña flexible y resistente</li>
+<li>Suela de poliuretano negro de doble densidad inyectado, tiene como característica de ligereza, resistencia a la abrasión, resistencia al plegado, resistencia al aceite, resistencia química, suave, comodidad de uso, elasticidad, resistencia a los golpes y antideslizamiento. Flexión 40.7 mm 3,3500 máxima, dureza 60-70</li>
+</ul>
+</div>
+</div>
+
+<div class="product">
+<img src="images/0107.jpg" alt="Estilo 0107">
+<div class="product-info">
+<h3>Estilo 0107</h3>
+<div class="product-tallas">Tallas: 25 AL 30</div>
+<h4>Ficha Técnica</h4>
+<ul>
+<li>Bota borceguí</li>
+<li>Piel vacuna Calibre 20/22</li>
+<li>Tejido exterior resistente, como piel negra</li>
+<li>Casco de poliamida 630, de alta densidad y mayor protección</li>
+<li>Sistema de cordones de cierre rápido y cambrillón de termoplástico</li>
+<li>Agujeta Polyester con alma de algodón de 8 cabos mínimo y herretes de plástico</li>
+<li>Forros Malla baical tratada con ultra fresh-antibacterial con un grueso de 4 mm para mayor confort y duración en el tubo, en la chinela carnaza perlada para que transpire el pie sin problemas y con mayor frescura</li>
+<li>Plantilla Ergonómica recubierta con malla textil con excelente transpiración, mallas textiles de alta transpiración y tratamiento antimicrobiano. Tejidos transpirables e impermeables para mantener el pie seco</li>
+<li>Planta Material de fibra de poliéster alta flexibilidad con buena absorción y des absorción de agua resistente al crecimiento de hongos y bacterias</li>
+<li>Forro interior de alta calidad</li>
+<li>Protección de tobillos con caña flexible y resistente</li>
+<li>Suela hule negro, teniendo como característica de ligereza, resistencia a la abrasión, resistencia al plegado, antideslizante, aislante térmico, amortiguación media, impermeable, resistente a un rango de temperatura de -10 °C a 70 °C</li>
+</ul>
+</div>
+</div>
+
+<div class="product">
+<img src="images/0108.jpg" alt="Estilo 0108">
+<div class="product-info">
+<h3>Estilo 0108</h3>
+<div class="product-tallas">Tallas: 25 AL 30</div>
+<h4>Ficha Técnica</h4>
+<ul>
+<li>Bota borceguí</li>
+<li>Piel vacuna</li>
+<li>Tejido exterior resistente, como piel calibre 20/22</li>
+<li>Casco de poliamida 630, de alta densidad y mayor protección</li>
+<li>Sistema de cordones de cierre rápido y cambrillón de termoplástico</li>
+<li>Agujeta Polyester con alma de algodón de 8 cabos mínimo y herretes de plástico</li>
+<li>Forros Malla baical tratada con ultra fresh-antibacterial con un grueso de 4 mm para mayor confort y duración en el tubo, en la chinela carnaza perlada para que transpire el pie sin problemas y con mayor frescura</li>
+<li>Plantilla Ergonómica recubierta con malla textil con excelente transpiración, mallas textiles de alta transpiración y tratamiento antimicrobiano. Tejidos transpirables e impermeables para mantener el pie seco</li>
+<li>Planta Material de fibra de poliéster alta flexibilidad con buena absorción y des absorción de agua resistente al crecimiento de hongos y bacterias</li>
+<li>Contrahazte Material de resina sintética de 4 fierros de espesor</li>
+<li>Forro interior de alta calidad</li>
+<li>Protección de tobillos con caña flexible y resistente</li>
+<li>Suela de poliuretano negro mono densidad, tiene como característica, ligereza, resistencia a la abrasión, capacidad para la absorción de impactos, resistente a hidrocarburos (no recomendada en altas temperaturas, áreas húmedas salinas o plataformas petroleras por hidrólisis)</li>
+</ul>
+</div>
+</div>
+
+<div class="product">
+<img src="images/7381.jpg" alt="Estilo 7381">
+<div class="product-info">
+<h3>Estilo 7381</h3>
+<div class="product-tallas">Tallas: 25 AL 30</div>
+<h4>Ficha Técnica</h4>
+<ul>
+<li>Bota borceguí</li>
+<li>Piel vacuna Calibre 20/22</li>
+<li>Tejido exterior resistente, como piel calibre 20/22</li>
+<li>Casco de poliamida 630, de alta densidad y mayor protección</li>
+<li>Sistema de cordones de cierre rápido y cambrillón de termoplástico</li>
+<li>Agujeta Polyester con alma de algodón de 8 cabos mínimo y herretes de plástico</li>
+<li>Forros Malla baical tratada con ultra fresh-antibacterial con un grueso de 4 mm para mayor confort y duración en el tubo, en la chinela carnaza perlada para que transpire el pie sin problemas y con mayor frescura</li>
+<li>Plantilla Ergonómica recubierta con malla textil con excelente transpiración, mallas textiles de alta transpiración y tratamiento antimicrobiano. Tejidos transpirables e impermeables para mantener el pie seco</li>
+<li>Planta Material de fibra de poliéster alta flexibilidad con buena absorción y des absorción de agua resistente al crecimiento de hongos y bacterias</li>
+<li>Contrahazte Material de resina sintética de 4 fierros de espesor</li>
+<li>Forro interior de alta calidad</li>
+<li>Protección de tobillos con caña flexible y resistente</li>
+<li>Suela de hule negro con bómper en punta, teniendo como característica de ligereza, resistencia a la abrasión, resistencia al plegado, antideslizante, aislante térmico, amortiguación media, impermeable, resistente a un rango de temperatura de -10 °C a 70 °C</li>
+</ul>
+</div>
+</div>
+
+<div class="product">
+<img src="images/4350_borcegui.jpg" alt="Estilo 4350 Borceguí">
+<div class="product-info">
+<h3>Estilo 4350 (Borceguí)</h3>
+<div class="product-tallas">Tallas: 22 AL 30</div>
+<h4>Ficha Técnica</h4>
+<ul>
+<li>Bota borceguí</li>
+<li>Piel vacuna Calibre 20/22</li>
+<li>Tejido exterior resistente, como piel calibre 20/22</li>
+<li>Casco de poliamida 630, de alta densidad y mayor protección</li>
+<li>Ganchos de acero pavonados</li>
+<li>Sistema de cordones de cierre rápido y cambrillón de termoplástico</li>
+<li>Agujeta Polyester con alma de algodón de 8 cabos mínimo y herretes de plástico</li>
+<li>Forros Malla baical tratada con ultra fresh-antibacterial con un grueso de 4 mm para mayor confort y duración en el tubo, en la chinela carnaza perlada para que transpire el pie sin problemas y con mayor frescura</li>
+<li>Plantilla Ergonómica recubierta con malla textil con excelente transpiración, mallas textiles de alta transpiración y tratamiento antimicrobiano. Tejidos transpirables e impermeables para mantener el pie seco</li>
+<li>Planta Material de fibra de poliéster alta flexibilidad con buena absorción y des absorción de agua resistente al crecimiento de hongos y bacterias</li>
+<li>Contrahazte Material de resina sintética de 4 fierros de espesor</li>
+<li>Forro interior de alta calidad</li>
+<li>Protección de tobillos con caña flexible y resistente</li>
+<li>Suela de poliuretano negro mono densidad: Teniendo como característica de ligereza, resistencia a la abrasión, resistencia al plegado, resistencia al aceite, resistencia química, suave, comodidad de uso, elasticidad, resistencia a los golpes y antideslizamiento. Flexión 40.7 mm 3,3500 máxima, dureza 60-70</li>
+</ul>
+</div>
+</div>
+
+<div class="product">
+<img src="images/4650.jpg" alt="Estilo 4650">
+<div class="product-info">
+<h3>Estilo 4650</h3>
+<div class="product-tallas">Tallas: 22 AL 30</div>
+<h4>Ficha Técnica</h4>
+<ul>
+<li>Bota pull-on</li>
+<li>Piel vacuna Calibre 20/22</li>
+<li>Tejido exterior resistente, como piel calibre 20/22</li>
+<li>Casco de poliamida 630, de alta densidad y mayor protección</li>
+<li>Elásticos de 130mm con alta resistencia a la elasticidad adsorbiendo el impacto de elongación del mismo</li>
+<li>Sistema de cordones de cierre rápido y cambrillón de termoplástico</li>
+<li>Forros Malla baical tratada con ultra fresh-antibacterial con un grueso de 4 mm para mayor confort y duración en el tubo, en la chinela carnaza perlada para que transpire el pie sin problemas y con mayor frescura</li>
+<li>Plantilla Ergonómica recubierta con malla textil con excelente transpiración, mallas textiles de alta transpiración y tratamiento antimicrobiano. Tejidos transpirables e impermeables para mantener el pie seco</li>
+<li>Planta Material de fibra de poliéster alta flexibilidad con buena absorción y des absorción de agua resistente al crecimiento de hongos y bacterias</li>
+<li>Contrahazte Material de resina sintética de 4 fierros de espesor</li>
+<li>Forro interior de alta calidad</li>
+<li>Protección de tobillos con caña flexible y resistente</li>
+<li>Suela de poliuretano negro mono densidad: Teniendo como característica de ligereza, resistencia a la abrasión, resistencia al plegado, resistencia al aceite, resistencia química, suave, comodidad de uso, elasticidad, resistencia a los golpes y antideslizamiento. Flexión 40.7 mm 3,3500 máxima, dureza 60-70</li>
+</ul>
+</div>
+</div>
+
+<div class="product">
+<img src="images/4350_pullon.jpg" alt="Estilo 4350 Pull-On">
+<div class="product-info">
+<h3>Estilo 4350 (Pull-On)</h3>
+<div class="product-tallas">Tallas: 22 AL 30</div>
+<h4>Ficha Técnica</h4>
+<ul>
+<li>Bota pull-on</li>
+<li>Piel vacuna Calibre 20/22</li>
+<li>Tejido exterior resistente, como piel negra</li>
+<li>Casco de poliamida 630</li>
+<li>Elásticos de 130mm con alta resistencia a la elasticidad adsorbiendo el impacto de elongación del mismo</li>
+<li>Sistema de cordones de cierre rápido y cambrillón de termoplástico</li>
+<li>Forros Malla baical tratada con ultra fresh-antibacterial con un grueso de 4 mm para mayor confort y duración en el tubo, en la chinela carnaza perlada para que transpire el pie sin problemas y con mayor frescura</li>
+<li>Plantilla Ergonómica recubierta con malla textil con excelente transpiración, mallas textiles de alta transpiración y tratamiento antimicrobiano. Tejidos transpirables e impermeables para mantener el pie seco</li>
+<li>Planta Material de fibra de poliéster alta flexibilidad con buena absorción y des absorción de agua resistente al crecimiento de hongos y bacterias</li>
+<li>Contrahazte Material de resina sintética de 4 fierros de espesor</li>
+<li>Forro interior de alta calidad</li>
+<li>Protección de tobillos con caña flexible y resistente</li>
+<li>Suela hule negro, teniendo como característica de ligereza, resistencia a la abrasión, resistencia al plegado, antideslizante, aislante térmico, amortiguación media, impermeable, resistente a un rango de temperatura de -10 °C a 70 °C</li>
+</ul>
+</div>
+</div>
+
+<div class="product">
+<img src="images/3053.jpg" alt="Estilo 3053">
+<div class="product-info">
+<h3>Estilo 3053</h3>
+<div class="product-tallas">Tallas: 22 AL 33</div>
+<h4>Ficha Técnica</h4>
+<ul>
+<li>Bota borceguí</li>
+<li>Piel vacuna</li>
+<li>Tejido exterior resistente, como piel negra</li>
+<li>Casco de poliamida 630</li>
+<li>Sistema de cordones de cierre rápido y cambrillón de termoplástico</li>
+<li>Agujeta Polyester con alma de algodón de 8 cabos mínimo y herretes de plástico</li>
+<li>Forros Malla baical tratada con ultra fresh-antibacterial con un grueso de 4 mm para mayor confort y duración en el tubo, en la chinela carnaza perlada para que transpire el pie sin problemas y con mayor frescura</li>
+<li>Plantilla Ergonómica recubierta con malla textil con excelente transpiración, mallas textiles de alta transpiración y tratamiento antimicrobiano. Tejidos transpirables e impermeables para mantener el pie seco</li>
+<li>Planta Material de fibra de poliéster alta flexibilidad con buena absorción y des absorción de agua resistente al crecimiento de hongos y bacterias</li>
+<li>Contrahazte Material de resina sintética de 4 fierros de espesor</li>
+<li>Forro interior de alta calidad</li>
+<li>Protección de tobillos con caña flexible y resistente</li>
+<li>Suela hule negro, teniendo como característica de ligereza, resistencia a la abrasión, resistencia al plegado, antideslizante, aislante térmico, amortiguación media, impermeable, resistente a un rango de temperatura de -10 °C a 70 °C</li>
+</ul>
+</div>
+</div>
+
+<div class="product">
+<img src="images/5000.jpg" alt="Estilo 5000">
+<div class="product-info">
+<h3>Estilo 5000</h3>
+<div class="product-tallas">Tallas: 22 AL 30</div>
+<h4>Ficha Técnica</h4>
+<ul>
+<li>Bota táctica</li>
+<li>Piel vacuna Calibre 20/22</li>
+<li>Tejido exterior resistente, como piel negra</li>
+<li>Casco de Celaste de resina en la punta</li>
+<li>Sistema de cordones de cierre rápido y cambrillón de termoplástico</li>
+<li>Agujeta Polyester con alma de algodón de 8 cabos mínimo y herretes de plástico</li>
+<li>Forros Malla baical tratada con ultra fresh-antibacterial con un grueso de 4 mm para mayor confort y duración en el tubo, en la chinela carnaza perlada para que transpire el pie sin problemas y con mayor frescura</li>
+<li>Plantilla Ergonómica recubierta con malla textil con excelente transpiración, mallas textiles de alta transpiración y tratamiento antimicrobiano. Tejidos transpirables e impermeables para mantener el pie seco</li>
+<li>Planta Material de fibra de poliéster alta flexibilidad con buena absorción y des absorción de agua resistente al crecimiento de hongos y bacterias</li>
+<li>Contrahazte Material de resina sintética de 4 fierros de espesor</li>
+<li>Forro interior de alta calidad</li>
+<li>Protección de tobillos con caña flexible y resistente</li>
+<li>Suela hule negro, teniendo como característica de ligereza, resistencia a la abrasión, resistencia al plegado, antideslizante, aislante térmico, amortiguación media, impermeable, resistente a un rango de temperatura de -10 °C a 70 °C</li>
+</ul>
+</div>
+</div>
+
+<div class="product">
+<img src="images/5010.jpg" alt="Estilo 5010">
+<div class="product-info">
+<h3>Estilo 5010</h3>
+<div class="product-tallas">Tallas: 22 AL 30</div>
+<h4>Ficha Técnica</h4>
+<ul>
+<li>Bota táctica</li>
+<li>Piel vacuna Calibre 20/22</li>
+<li>Tejido exterior resistente, como piel negra</li>
+<li>Casco de poliamida 630</li>
+<li>Sistema de cordones de cierre rápido y cambrillón de termoplástico</li>
+<li>Agujeta Polyester con alma de algodón de 8 cabos mínimo y herretes de plástico</li>
+<li>Forros Malla baical tratada con ultra fresh-antibacterial con un grueso de 4 mm para mayor confort y duración en el tubo, en la chinela carnaza perlada para que transpire el pie sin problemas y con mayor frescura</li>
+<li>Plantilla Ergonómica recubierta con malla textil con excelente transpiración, mallas textiles de alta transpiración y tratamiento antimicrobiano. Tejidos transpirables e impermeables para mantener el pie seco</li>
+<li>Planta Material de fibra de poliéster alta flexibilidad con buena absorción y des absorción de agua resistente al crecimiento de hongos y bacterias</li>
+<li>Contrahazte Material de resina sintética de 4 fierros de espesor</li>
+<li>Forro interior de alta calidad</li>
+<li>Protección de tobillos con caña flexible y resistente</li>
+<li>Suela hule negro, teniendo como característica de ligereza, resistencia a la abrasión, resistencia al plegado, antideslizante, aislante térmico, amortiguación media, impermeable, resistente a un rango de temperatura de -10 °C a 70 °C</li>
+</ul>
+</div>
+</div>
+
+<div class="product">
+<img src="images/1000.jpg" alt="Estilo 1000">
+<div class="product-info">
+<h3>Estilo 1000</h3>
+<div class="product-tallas">Tallas: 23 AL 30</div>
+<h4>Ficha Técnica</h4>
+<ul>
+<li>Wellington</li>
+<li>Piel vacuna Calibre 20/22</li>
+<li>Casco de poliamida 630</li>
+<li>Sistema de cordones de cierre rápido y cambrillón de termoplástico</li>
+<li>Forros Malla baical tratada con ultra fresh-antibacterial con un grueso de 4 mm para mayor confort y duración en el tubo, en la chinela carnaza perlada para que transpire el pie sin problemas y con mayor frescura</li>
+<li>Plantilla Ergonómica recubierta con malla textil con excelente transpiración, mallas textiles de alta transpiración y tratamiento antimicrobiano. Tejidos transpirables e impermeables para mantener el pie seco</li>
+<li>Planta Material de fibra de poliéster alta flexibilidad con buena absorción y des absorción de agua resistente al crecimiento de hongos y bacterias</li>
+<li>Forro interior de alta calidad</li>
+<li>Suela hule negro, teniendo como característica de ligereza, resistencia a la abrasión, resistencia al plegado, antideslizante, aislante térmico, amortiguación media, impermeable, resistente a un rango de temperatura de -10 °C a 70 °C</li>
+</ul>
+</div>
+</div>
+
+<div class="product">
+<img src="images/9030.jpg" alt="Estilo 9030">
+<div class="product-info">
+<h3>Estilo 9030</h3>
+<div class="product-tallas">Tallas: 25 AL 30</div>
+<h4>Ficha Técnica</h4>
+<ul>
+<li>Bota borceguí</li>
+<li>Piel vacuna Calibre 20/22</li>
+<li>Tejido exterior resistente, como piel negra</li>
+<li>Casco de poliamida 630</li>
+<li>Sistema de cordones de cierre rápido y cambrillón de termoplástico</li>
+<li>Agujeta Polyester con alma de algodón de 8 cabos mínimo y herretes de plástico</li>
+<li>Forros Malla baical tratada con ultra fresh-antibacterial con un grueso de 4 mm para mayor confort y duración en el tubo, en la chinela carnaza perlada para que transpire el pie sin problemas y con mayor frescura</li>
+<li>Plantilla Ergonómica recubierta con malla textil con excelente transpiración, mallas textiles de alta transpiración y tratamiento antimicrobiano. Tejidos transpirables e impermeables para mantener el pie seco</li>
+<li>Planta Material de fibra de poliéster alta flexibilidad con buena absorción y des absorción de agua resistente al crecimiento de hongos y bacterias</li>
+<li>Contrahazte Material de resina sintética de 4 fierros de espesor</li>
+<li>Forro interior de alta calidad</li>
+<li>Protección de tobillos con caña flexible y resistente</li>
+<li>Suela hule negro, teniendo como característica de ligereza, resistencia a la abrasión, resistencia al plegado, antideslizante, aislante térmico, amortiguación media, impermeable, resistente a un rango de temperatura de -10 °C a 70 °C</li>
+</ul>
+</div>
+</div>
+
+<div class="product">
+<img src="images/9032.jpg" alt="Estilo 9032">
+<div class="product-info">
+<h3>Estilo 9032</h3>
+<div class="product-tallas">Tallas: 25 AL 30</div>
+<h4>Ficha Técnica</h4>
+<ul>
+<li>Bota borceguí</li>
+<li>Piel vacuna Calibre 20/22</li>
+<li>Tejido exterior resistente, como piel negra</li>
+<li>Casco de poliamida 630</li>
+<li>Ganchos de acero pavonados</li>
+<li>Sistema de cordones de cierre rápido y cambrillón de termoplástico</li>
+<li>Agujeta Polyester con alma de algodón de 8 cabos mínimo y herretes de plástico</li>
+<li>Forros Malla baical tratada con ultra fresh-antibacterial con un grueso de 4 mm para mayor confort y duración en el tubo, en la chinela carnaza perlada para que transpire el pie sin problemas y con mayor frescura</li>
+<li>Plantilla Ergonómica recubierta con malla textil con excelente transpiración, mallas textiles de alta transpiración y tratamiento antimicrobiano. Tejidos transpirables e impermeables para mantener el pie seco</li>
+<li>Planta Material de fibra de poliéster alta flexibilidad con buena absorción y des absorción de agua resistente al crecimiento de hongos y bacterias</li>
+<li>Contrahazte Material de resina sintética de 4 fierros de espesor</li>
+<li>Forro interior de alta calidad</li>
+<li>Protección de tobillos con caña flexible y resistente</li>
+<li>Suela hule negro, teniendo como característica de ligereza, resistencia a la abrasión, resistencia al plegado, antideslizante, aislante térmico, amortiguación media, impermeable, resistente a un rango de temperatura de -10 °C a 70 °C</li>
+</ul>
+</div>
+</div>
+
+<div class="product">
+<img src="images/1850.jpg" alt="Estilo 1850">
+<div class="product-info">
+<h3>Estilo 1850</h3>
+<div class="product-tallas">Tallas: 25 AL 30</div>
+<h4>Ficha Técnica</h4>
+<ul>
+<li>Bota borceguí</li>
+<li>Piel vacuna Calibre 20/22</li>
+<li>Tejido exterior resistente, como piel negra</li>
+<li>Casco de poliamida 630</li>
+<li>Sistema de cordones de cierre rápido y cambrillón de termoplástico</li>
+<li>Agujeta Polyester con alma de algodón de 8 cabos mínimo y herretes de plástico</li>
+<li>Forros Malla baical tratada con ultra fresh-antibacterial con un grueso de 4 mm para mayor confort y duración en el tubo, en la chinela carnaza perlada para que transpire el pie sin problemas y con mayor frescura</li>
+<li>Plantilla Ergonómica recubierta con malla textil con excelente transpiración, mallas textiles de alta transpiración y tratamiento antimicrobiano. Tejidos transpirables e impermeables para mantener el pie seco</li>
+<li>Planta Material de fibra de poliéster alta flexibilidad con buena absorción y des absorción de agua resistente al crecimiento de hongos y bacterias</li>
+<li>Contrahazte Material de resina sintética de 4 fierros de espesor</li>
+<li>Forro interior de alta calidad</li>
+<li>Protección de tobillos con caña flexible y resistente</li>
+<li>Suela hule negro, teniendo como característica de ligereza, resistencia a la abrasión, resistencia al plegado, antideslizante, aislante térmico, amortiguación media, impermeable, resistente a un rango de temperatura de -10 °C a 70 °C</li>
+</ul>
+</div>
+</div>
+
+<div class="product">
+<img src="images/4500.jpg" alt="Estilo 4500">
+<div class="product-info">
+<h3>Estilo 4500</h3>
+<div class="product-tallas">Tallas: 25 AL 30</div>
+<h4>Ficha Técnica</h4>
+<ul>
+<li>Bota borceguí</li>
+<li>Piel vacuna Calibre 20/22</li>
+<li>Tejido exterior resistente, como piel negra</li>
+<li>Casco de poliamida 630</li>
+<li>Ganchos de acero pavonados</li>
+<li>Sistema de cordones de cierre rápido y cambrillón de termoplástico</li>
+<li>Agujeta Polyester con alma de algodón de 8 cabos mínimo y herretes de plástico</li>
+<li>Forros Malla baical tratada con ultra fresh-antibacterial con un grueso de 4 mm para mayor confort y duración en el tubo, en la chinela carnaza perlada para que transpire el pie sin problemas y con mayor frescura</li>
+<li>Plantilla Ergonómica recubierta con malla textil con excelente transpiración, mallas textiles de alta transpiración y tratamiento antimicrobiano. Tejidos transpirables e impermeables para mantener el pie seco</li>
+<li>Planta Material de fibra de poliéster alta flexibilidad con buena absorción y des absorción de agua resistente al crecimiento de hongos y bacterias</li>
+<li>Contrahazte Material de resina sintética de 4 fierros de espesor</li>
+<li>Forro interior de alta calidad</li>
+<li>Protección de tobillos con caña flexible y resistente</li>
+<li>Suela hule negro, teniendo como característica de ligereza, resistencia a la abrasión, resistencia al plegado, antideslizante, aislante térmico, amortiguación media, impermeable, resistente a un rango de temperatura de -10 °C a 70 °C</li>
+</ul>
+</div>
+</div>
+
+<div class="product">
+<img src="images/5300.jpg" alt="Estilo 5300">
+<div class="product-info">
+<h3>Estilo 5300</h3>
+<div class="product-tallas">Tallas: 22 AL 30</div>
+<h4>Ficha Técnica</h4>
+<ul>
+<li>Choclo industrial</li>
+<li>Piel vacuna 20/22</li>
+<li>Tejido exterior resistente, como piel negra</li>
+<li>Casco de poliamida 630</li>
+<li>Sistema de cordones de cierre rápido y cambrillón de termoplástico</li>
+<li>Agujeta Polyester con alma de algodón de 8 cabos mínimo y herretes de plástico</li>
+<li>Forros Malla baical tratada con ultra fresh-antibacterial con un grueso de 4 mm para mayor confort y duración en el tubo, en la chinela carnaza perlada para que transpire el pie sin problemas y con mayor frescura</li>
+<li>Plantilla Ergonómica recubierta con malla textil con excelente transpiración, mallas textiles de alta transpiración y tratamiento antimicrobiano. Tejidos transpirables e impermeables para mantener el pie seco</li>
+<li>Planta Material de fibra de poliéster alta flexibilidad con buena absorción y des absorción de agua resistente al crecimiento de hongos y bacterias</li>
+<li>Contrahazte Material de resina sintética de 4 fierros de espesor</li>
+<li>Forro interior de alta calidad</li>
+<li>Protección de tobillos con caña flexible y resistente</li>
+<li>Suela hule negro, teniendo como característica de ligereza, resistencia a la abrasión, resistencia al plegado, antideslizante, aislante térmico, amortiguación media, impermeable, resistente a un rango de temperatura de -10 °C a 70 °C</li>
+</ul>
+</div>
+</div>
+
+<div class="product">
+<img src="images/4250.jpg" alt="Estilo 4250">
+<div class="product-info">
+<h3>Estilo 4250</h3>
+<div class="product-tallas">Tallas: 22 AL 30</div>
+<h4>Ficha Técnica</h4>
+<ul>
+<li>Bota pull-on</li>
+<li>Piel vacuna Calibre 20/22</li>
+<li>Tejido exterior resistente, como piel negra</li>
+<li>Casco de poliamida 630</li>
+<li>Elásticos de 130mm con alta resistencia a la elasticidad adsorbiendo el impacto de elongación del mismo</li>
+<li>Protección en el área del elástico para mayor seguridad del tobillo</li>
+<li>Sistema de cordones de cierre rápido y cambrillón de termoplástico</li>
+<li>Forros Malla baical tratada con ultra fresh-antibacterial con un grueso de 4 mm para mayor confort y duración en el tubo, en la chinela carnaza perlada para que transpire el pie sin problemas y con mayor frescura</li>
+<li>Plantilla Ergonómica recubierta con malla textil con excelente transpiración, mallas textiles de alta transpiración y tratamiento antimicrobiano. Tejidos transpirables e impermeables para mantener el pie seco</li>
+<li>Planta Material de fibra de poliéster alta flexibilidad con buena absorción y des absorción de agua resistente al crecimiento de hongos y bacterias</li>
+<li>Contrahazte Material de resina sintética de 4 fierros de espesor</li>
+<li>Forro interior de alta calidad</li>
+<li>Protección de tobillos con caña flexible y resistente</li>
+<li>Suela hule negro, teniendo como característica de ligereza, resistencia a la abrasión, resistencia al plegado, antideslizante, aislante térmico, amortiguación media, impermeable, resistente a un rango de temperatura de -10 °C a 70 °C</li>
+</ul>
+</div>
+</div>
+
+<div class="product">
+<img src="images/2305.jpg" alt="Estilo 2305">
+<div class="product-info">
+<h3>Estilo 2305</h3>
+<div class="product-tallas">Tallas: 25 AL 30</div>
+<h4>Ficha Técnica</h4>
+<ul>
+<li>Bota borceguí</li>
+<li>Piel vacuna</li>
+<li>Tejido exterior resistente, como piel calibre 20/22</li>
+<li>Casco de poliamida 630, de alta densidad y mayor protección</li>
+<li>Sistema de cordones de cierre rápido y cambrillón de termoplástico</li>
+<li>Agujeta Polyester con alma de algodón de 8 cabos mínimo y herretes de plástico</li>
+<li>Forros Malla baical tratada con ultra fresh-antibacterial con un grueso de 4 mm para mayor confort y duración en el tubo, en la chinela carnaza perlada para que transpire el pie sin problemas y con mayor frescura</li>
+<li>Plantilla Ergonómica recubierta con malla textil con excelente transpiración, mallas textiles de alta transpiración y tratamiento antimicrobiano. Tejidos transpirables e impermeables para mantener el pie seco</li>
+<li>Planta Material de fibra de poliéster alta flexibilidad con buena absorción y des absorción de agua resistente al crecimiento de hongos y bacterias</li>
+<li>Contrahazte Material de resina sintética de 4 fierros de espesor</li>
+<li>Forro interior de alta calidad</li>
+<li>Protección de tobillos con caña flexible y resistente</li>
+<li>Suela de poliuretano negro mono densidad teniendo como característica de ligereza, resistencia a la abrasión, resistencia al plegado, resistencia al aceite, resistencia química, suave, comodidad de uso, elasticidad, resistencia a los golpes y antideslizamiento. Flexión 40.7 mm 3,3500 máxima, dureza 60-70</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="tecnologia">
+
+<div class="container">
+
+<h2 class="section-title">
+Tecnología Force Point
+</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Piel Vacuna</h3>
+<p>Alta resistencia y durabilidad.</p>
+</div>
+
+<div class="card">
+<h3>Casquillo de Protección</h3>
+<p>Poliamida y termoplástico.</p>
+</div>
+
+<div class="card">
+<h3>Plantilla Ergonómica</h3>
+<p>Mayor confort durante la jornada.</p>
+</div>
+
+<div class="card">
+<h3>Tratamiento Antimicrobiano</h3>
+<p>Excelente transpiración y control de humedad.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="certificaciones">
+
+<div class="container">
+
+<h2 class="section-title">
+Certificaciones
+</h2>
+
+<div class="certs">
+
+<div class="cert">NOM-113-STPS-2009</div>
+<div class="cert">ASTM</div>
+<div class="cert">DIELÉCTRICO</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="distribuidores">
+
+<div class="container">
+
+<h2 class="section-title">
+Distribuidores Autorizados
+</h2>
+
+<p class="section-sub">
+Buscamos socios comerciales en todo México.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>Beneficios</h3>
+
+<p>✔ Atención personalizada</p>
+<p>✔ Precios preferenciales</p>
+<p>✔ Apoyo comercial</p>
+<p>✔ Catálogo completo</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="cotizacion">
+
+<div class="container">
+
+<h2 class="section-title">
+Solicitar Cotización
+</h2>
+
+<form>
+
+<div class="form-group">
+<input type="text" placeholder="Nombre completo">
+</div>
+
+<div class="form-group">
+<input type="text" placeholder="Empresa">
+</div>
+
+<div class="form-group">
+<input type="email" placeholder="Correo electrónico">
+</div>
+
+<div class="form-group">
+<input type="tel" placeholder="Teléfono">
+</div>
+
+<div class="form-group">
+<select>
+<option>Modelo de interés</option>
+<option>0043</option>
+<option>8430</option>
+<option>0107</option>
+<option>0108</option>
+<option>7381</option>
+<option>4350</option>
+<option>4650</option>
+<option>3053</option>
+<option>5000</option>
+<option>5010</option>
+<option>1000</option>
+<option>9030</option>
+<option>9032</option>
+<option>1850</option>
+<option>4500</option>
+<option>5300</option>
+<option>4250</option>
+<option>2305</option>
+</select>
+</div>
+
+<div class="form-group">
+<textarea placeholder="Comentarios"></textarea>
+</div>
+
+<button class="btn btn-primary">
+Enviar Solicitud
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<section id="contacto">
+
+<div class="container">
+
+<h2 class="section-title">
+Contacto
+</h2>
+
+<p style="text-align:center;">
+📍 Purísima del Rincón, Guanajuato
+</p>
+
+<p style="text-align:center;">
+📱 476 157 7134
+</p>
+
+<p style="text-align:center;">
+✉️ ghprogramacion@gmail.com
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+FORCE POINT © 2025 | Calzado Industrial de Alto Desempeño
+</p>
+
+</footer>
+
+<a
+href="https://wa.me/524761577134"
+class="whatsapp">
+💬
+</a>
+
+</body>
+</html>
